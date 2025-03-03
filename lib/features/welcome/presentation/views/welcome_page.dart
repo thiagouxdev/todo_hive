@@ -66,45 +66,49 @@ class WelcomePage extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.all(32.0),
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                AppImages.load(
-                  AppHelperFunctions.isDarkMode(context)
-                      ? AppImages.appLogoDark
-                      : AppImages.appLogoLight,
-                  width: 156,
-                  height: 156,
-                ),
-                const SizedBox(height: 24),
-                Text(
-                  '${AppStrings.getWelcomeTitle(context)} ${AppStrings.getAppName(context)}',
-                  style: Theme.of(context).textTheme.headlineMedium,
-                ),
-                const SizedBox(height: 16),
-                Text(
-                  AppStrings.getWelcomeDescription(context),
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
-                const SizedBox(height: 48),
-                ConstrainedBox(
-                  constraints: const BoxConstraints(maxWidth: 412),
-                  child: SizedBox(
-                    width: double.infinity,
-                    height: 52,
-                    child: FilledButton(
-                      onPressed: () async {
-                        // Salva a flag indicando que o usuário já viu a tela de Welcome
-                        await PreferencesService.setHasSeenWelcome(true);
-                        Navigator.pushReplacementNamed(context, AppRoutes.home);
-                      },
-                      child: Text(AppStrings.getStartButton(context)),
-                    ),
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      AppImages.load(
+                        AppHelperFunctions.isDarkMode(context)
+                            ? AppImages.appLogoDark
+                            : AppImages.appLogoLight,
+                        width: 156,
+                        height: 156,
+                      ),
+                      const SizedBox(height: 24),
+                      Text(
+                        '${AppStrings.getWelcomeTitle(context)} ${AppStrings.getAppName(context)}',
+                        style: Theme.of(context).textTheme.headlineMedium,
+                      ),
+                      const SizedBox(height: 16),
+                      Text(
+                        AppStrings.getWelcomeDescription(context),
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.bodyLarge,
+                      ),
+                    ],
                   ),
                 ),
-                const SizedBox(height: 20),
+
+                SizedBox(
+                  width: double.infinity,
+                  height: 52,
+                  child: FilledButton(
+                    onPressed: () async {
+                      // Salva a flag indicando que o usuário já viu a tela de Welcome
+                      await PreferencesService.setHasSeenWelcome(true);
+                      Navigator.pushReplacementNamed(context, AppRoutes.home);
+                    },
+                    child: Text(AppStrings.getStartButton(context)),
+                  ),
+                ),
+
                 // Botão temporário para resetar a flag
                 TextButton(
                   onPressed: () async {
@@ -116,6 +120,7 @@ class WelcomePage extends StatelessWidget {
                   },
                   child: const Text('Resetar Welcome (Teste)'),
                 ),
+                const SizedBox(height: 24),
               ],
             ),
           ),
