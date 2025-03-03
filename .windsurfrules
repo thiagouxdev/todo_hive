@@ -1,0 +1,4 @@
+1. Use somente cores, tamanho e text... do theme.of(context)
+2. Use o material 3
+3. Quebre interface maiores em widgets menores sempre que possivel
+4. Respeite os padrão do app arquiteture recomendado pelo time do flutter com mvvm
