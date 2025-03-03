@@ -1,14 +1,14 @@
 final Map<String, String> zhTranslations = {
   // App Name
-  'appName': '基本應用程式',
+  'appName': '奥尔比',
 
   // Navigation Titles
   'todo': '待办事项',
   'settings': '设置',
 
   // Welcome Page
-  'welcomeTitle': '欢迎使用',
-  'welcomeDescription': '简单高效地组织您的日常任务。让我们一起实现您的目标！',
+  'welcomeTitle': '欢迎来到',
+  'welcomeDescription': '以简单有效的方式组织您周围的日常事务。让我们一起实现您的目标！',
   'startButton': '开始',
 
   // List Page

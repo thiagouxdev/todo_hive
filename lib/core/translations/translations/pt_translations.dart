@@ -1,15 +1,15 @@
 final Map<String, String> ptTranslations = {
   // App Name
-  'appName': 'Basico App',
+  'appName': 'Orbi',
 
   // Navigation Titles
   'todo': 'Todo',
   'settings': 'Configurações',
 
   // Welcome Page
-  'welcomeTitle': 'Bem-vindo',
+  'welcomeTitle': 'Bem-vindo ao',
   'welcomeDescription':
-      'Organize suas tarefas diárias de forma simples e eficiente. Vamos juntos alcançar seus objetivos!',
+      'Organização diárias de forma simples e eficiente o que orbita sobre você. Vamos juntos alcançar seus objetivos!',
   'startButton': 'Começar',
 
   // List Page

@@ -1,15 +1,15 @@
 final Map<String, String> esTranslations = {
   // App Name
-  'appName': 'Básico App',
+  'appName': 'Orbi',
 
   // Navigation Titles
   'todo': 'Todo',
   'settings': 'Configuración',
 
   // Welcome Page
-  'welcomeTitle': 'Bienvenido',
+  'welcomeTitle': 'Bienvenido a',
   'welcomeDescription':
-      'Organiza tus tareas diarias de forma simple y eficiente. ¡Juntos, alcancemos tus objetivos!',
+      'Organización diaria de forma sencilla y eficiente de lo que orbita a tu alrededor. ¡Logremos tus objetivos juntos!',
   'startButton': 'Comenzar',
 
   // List Page

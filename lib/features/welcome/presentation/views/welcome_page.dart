@@ -79,7 +79,7 @@ class WelcomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 24),
                 Text(
-                  AppStrings.getWelcomeTitle(context),
+                  '${AppStrings.getWelcomeTitle(context)} ${AppStrings.getAppName(context)}',
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 const SizedBox(height: 16),

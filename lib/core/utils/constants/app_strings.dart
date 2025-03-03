@@ -3,12 +3,12 @@ import 'package:todo_hive/core/translations/app_translations.dart';
 
 class AppStrings {
   // App Name
-  static const String appName = '+1 Todo';
+  static const String appName = 'Orbi';
   static String getAppName(BuildContext context) =>
       AppTranslations.translate(context, 'appName');
 
   // Welcome Page
-  static const String welcomeTitle = 'Bem-vindo';
+  static const String welcomeTitle = 'Bem-vindo ao';
   static String getWelcomeTitle(BuildContext context) =>
       AppTranslations.translate(context, 'welcomeTitle');
 

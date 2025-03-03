@@ -100,7 +100,7 @@ class _SplashScreenState extends State<SplashScreen>
                 );
               },
             ),
-            const SizedBox(height: 32),
+
             // App name
             AnimatedBuilder(
               animation: _controller,
@@ -108,8 +108,8 @@ class _SplashScreenState extends State<SplashScreen>
                 return Opacity(
                   opacity: _opacityAnimation.value,
                   child: Text(
-                    AppStrings.appName,
-                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                    AppStrings.getAppName(context),
+                    style: Theme.of(context).textTheme.headlineLarge?.copyWith(
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).colorScheme.primary,
                         ),
