@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:todo_hive/core/utils/constants/app_strings.dart';
-import 'package:todo_hive/core/routes/app_routes.dart';
 import 'package:todo_hive/features/todo/presentation/views/todo_page.dart';
 import 'package:todo_hive/features/settings/views/settings_page.dart';
 
