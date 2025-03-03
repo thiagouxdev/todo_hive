@@ -8,7 +8,6 @@ class AppRoutes {
   static const String splash = '/splash';
   static const String welcome = '/welcome';
   static const String home = '/home';
-  static const String notifications = '/notifications';
 
   static Map<String, WidgetBuilder> get routes => {
         splash: (context) => const SplashScreen(),
@@ -32,9 +31,5 @@ class AppRoutes {
           builder: (_) => const WelcomePage(),
         );
     }
-  }
-
-  static void navigateToNotifications(BuildContext context) {
-    Navigator.pushNamed(context, notifications);
   }
 }

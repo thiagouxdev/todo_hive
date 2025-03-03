@@ -25,10 +25,6 @@ class _RootNavigationState extends State<RootNavigation> {
     });
   }
 
-  void _openNotifications() {
-    AppRoutes.navigateToNotifications(context);
-  }
-
   @override
   Widget build(BuildContext context) {
     // Get translated titles
