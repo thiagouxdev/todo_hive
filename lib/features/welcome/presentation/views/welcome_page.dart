@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:todo_hive/core/routes/app_routes.dart';
 import 'package:todo_hive/core/services/preferences_service.dart';
 
+import '../../../../core/utils/constants/app_image_strings.dart';
 import '../../../../core/utils/constants/app_strings.dart';
+import '../../../../core/utils/helpers/app_helper_functions.dart';
 import '../../../settings/views/language_page.dart';
 import '../../../settings/views/theme_page.dart';
 
@@ -68,7 +70,24 @@ class WelcomePage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Código do logo e textos...
+                AppImages.load(
+                  AppHelperFunctions.isDarkMode(context)
+                      ? AppImages.appLogoDark
+                      : AppImages.appLogoLight,
+                  width: 156,
+                  height: 156,
+                ),
+                const SizedBox(height: 24),
+                Text(
+                  AppStrings.getWelcomeTitle(context),
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  AppStrings.getWelcomeDescription(context),
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyLarge,
+                ),
                 const SizedBox(height: 48),
                 ConstrainedBox(
                   constraints: const BoxConstraints(maxWidth: 412),
@@ -89,7 +108,7 @@ class WelcomePage extends StatelessWidget {
                 // Botão temporário para resetar a flag
                 TextButton(
                   onPressed: () async {
-                    await PreferencesService.setHasSeenWelcome(true);
+                    await PreferencesService.setHasSeenWelcome(false);
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                           content: Text('Flag resetada para false!')),

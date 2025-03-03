@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_hive/core/utils/constants/app_strings.dart';
+import 'package:todo_hive/core/routes/app_routes.dart';
 import 'package:todo_hive/features/todo/presentation/views/todo_page.dart';
 import 'package:todo_hive/features/settings/views/settings_page.dart';
 
@@ -39,6 +40,14 @@ class _RootNavigationState extends State<RootNavigation> {
           titles[_selectedIndex],
           style: Theme.of(context).textTheme.headlineMedium,
         ),
+        actions: [
+          // Navegar para welcome page
+          IconButton(
+              icon: const Icon(Icons.logout_outlined),
+              onPressed: () {
+                Navigator.pushNamed(context, AppRoutes.welcome);
+              }),
+        ],
       ),
       body: IndexedStack(
         index: _selectedIndex,
